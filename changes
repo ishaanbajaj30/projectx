@@ -1,0 +1,38 @@
+<html>
+    <head>
+    <title>DOM manipulations</title>
+    <script type="text/javascript">
+    function validate()
+    {
+            var uname = document.getElementById("uname");
+            var password = document.getElementById("pass");
+            if(uname.value.trim()=="")
+            {
+                uname.style.border="solid 3px red";
+                document.getElementById("lbuser").style.visibility="visible";
+                return false;
+            }
+            else if(password.value=="ishaan")
+            {
+                
+               return true;
+            }
+            else
+            {       alert("Entered password is wrong");
+                    return false;
+            }
+            
+            
+    }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate();" action="index.html">
+        <input id="uname" placeholder="USERNAME" type="text" required/>
+        <label id ="lbuser" style ="color : red;visibility: hidden;">INVALID</label>   
+        <br><br>
+        <input type ="password" id ="pass" placeholder = "password" required/>
+        <button type="submit">Submitt</button>
+        </form>     
+    </body>
+</html>
